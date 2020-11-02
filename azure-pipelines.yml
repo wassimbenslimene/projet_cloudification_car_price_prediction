@@ -23,7 +23,7 @@ stages:
     - task: Docker@2
       inputs:
         containerRegistry: 'cloud docker-hub'
-        repository: 'projet_cloud_prediction_cout'
+        repository: 'wassim97/projet_cloud_prediction_cout'
         command: 'buildAndPush'
         Dockerfile: '**/Dockerfile'
         tags: '$(tag)'
