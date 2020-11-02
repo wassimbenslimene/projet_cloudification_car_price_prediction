@@ -21,7 +21,9 @@ stages:
       vmImage: 'ubuntu-latest'
     steps:
     - task: Docker@2
-      displayName: Build an image
       inputs:
         containerRegistry: 'cloud docker-hub'
-        command: 'login'
+        repository: 'projet_cloud_prediction_cout'
+        command: 'buildAndPush'
+        Dockerfile: '**/Dockerfile'
+        tags: '$(tag)'
