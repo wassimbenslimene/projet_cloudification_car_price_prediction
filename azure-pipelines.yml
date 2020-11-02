@@ -25,6 +25,6 @@ stages:
       inputs:
         containerRegistry: 'cloud docker-hub'
         repository: 'projet_cloud_prediction_cout'
-        command: 'build'
+        command: 'buildAndPush'
         Dockerfile: '**/Dockerfile'
         tags: '$(tag)'
