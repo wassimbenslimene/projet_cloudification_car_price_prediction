@@ -24,7 +24,4 @@ stages:
       displayName: Build an image
       inputs:
         containerRegistry: 'cloud docker-hub'
-        repository: 'projet_cloud_prediction_cout'
-        command: 'buildAndPush'
-        Dockerfile: '**/Dockerfile'
-        tags: '$(tag)'
+        command: 'login'
