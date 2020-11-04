@@ -20,9 +20,9 @@ steps:
     backendAzureRmResourceGroupLocation: 'westeurope'
     backendAzureRmStorageAccountName: 'storageacctxyzuv'
     backendAzureRmContainerName: 'storageacctcontainer'
+    backendAzureRmKey: 'kubernetes-dev.tfstate'
 - task: DownloadSecureFile@1
   name: publickey
   inputs:
     secureFile: 'azure_rsa.pub'
-    backendAzureRmKey: 'kubernetes-dev.tfstate'
-    allowTelemetryCollection: true
+    
