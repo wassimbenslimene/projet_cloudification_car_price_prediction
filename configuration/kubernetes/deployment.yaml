@@ -10,7 +10,7 @@ spec:
   minReadySeconds: 45
   selector:
     matchLabels:
-      app: currency-exchange
+      app: prediction_cout
   strategy:
     rollingUpdate:
       maxSurge: 25%
