@@ -60,12 +60,11 @@ metadata:
   name: prediction-cout
   namespace: default
 spec:
+  type: LoadBalancer
   ports:
-  - # nodePort: 30702 #CHANGE
-    port: 8000 #CHANGE
-    protocol: TCP
-    targetPort: 8000 #CHANGE
+  - protocol: TCP # nodePort: 30702 #CHANGE
+    port: 80 #CHANGE
+    targetPort: 8080 #CHANGE
   selector:
     app: prediction-cout
-  sessionAffinity: None #CHANGE
-  type: LoadBalancer
+  
