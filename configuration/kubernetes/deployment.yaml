@@ -2,8 +2,8 @@ apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
   labels:
-    app: currency-exchange
-  name: currency-exchange
+    app: prediction_cout
+  name: prediction_cout
   namespace: default
 spec:
   replicas: 1 #CHANGE
@@ -19,11 +19,11 @@ spec:
   template:
     metadata:
       labels:
-        app: currency-exchange
+        app: prediction_cout
     spec:
       containers:
-      - name: currency-exchange
-        image: in28min/currency-exchange-devops
+      - name: prediction_cout
+        image:wassim97/projet_cloud_prediction_cout
         imagePullPolicy: IfNotPresent
         ports:
         - name: liveness-port
@@ -56,8 +56,8 @@ apiVersion: v1
 kind: Service
 metadata:
   labels: #PODS
-    app: currency-exchange
-  name: currency-exchange
+    app: prediction_cout
+  name: prediction_cout
   namespace: default
 spec:
   ports:
@@ -66,6 +66,6 @@ spec:
     protocol: TCP
     targetPort: 8000 #CHANGE
   selector:
-    app: currency-exchange
+    app: prediction_cout
   sessionAffinity: None #CHANGE
   type: LoadBalancer

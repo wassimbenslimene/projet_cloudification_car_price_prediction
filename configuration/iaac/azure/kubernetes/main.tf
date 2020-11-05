@@ -1,6 +1,7 @@
 provider "azurerm" {
   features {}
 }
+
 resource "azurerm_resource_group" "resource_group" {
   name     = "${terraform.workspace}_${var.resource_group}_${var.environment}"
   location = var.location
