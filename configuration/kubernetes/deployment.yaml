@@ -24,7 +24,7 @@ spec:
       containers:
       - name: prediction_cout
         image:wassim97/projet_cloud_prediction_cout
-        imagePullPolicy: IfNotPresent
+        imagePullPolicy: Always
         ports:
         - name: liveness-port
           containerPort: 8000
